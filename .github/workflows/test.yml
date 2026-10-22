@@ -1,0 +1,19 @@
+name: Homebrew install
+on: [push, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  install:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-14, macos-15-intel]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install and test published formula
+        run: |
+          brew tap JaeHeong/tap
+          brew install --formula JaeHeong/tap/codex-runner
+          brew test JaeHeong/tap/codex-runner
+          codex-runner --version

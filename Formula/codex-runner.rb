@@ -1,18 +1,18 @@
 class CodexRunner < Formula
   desc "Resume local Codex sessions after subscription quota resets"
   homepage "https://github.com/JaeHeong/codex-runner"
-  version "0.7.0"
+  version "0.8.0"
   license "MIT"
   depends_on macos: :sonoma
 
   on_arm do
-    url "https://packages.jaehyeong.com/projects/codex-runner/0.7.0/codex-runner-0.7.0-macos-arm64.tar.gz"
-    sha256 "8f8ba04b3b85be8fd46aa7088a3f619c38dcb7ba327ae74f83e58a751b44a420"
+    url "https://packages.jaehyeong.com/projects/codex-runner/0.8.0/codex-runner-0.8.0-macos-arm64.tar.gz"
+    sha256 "3a0de68120cc34121765b2e3109b5b0ab5b448314de15c0a62bcdb8e072c009e"
   end
   on_intel do
     depends_on macos: :sequoia
-    url "https://packages.jaehyeong.com/projects/codex-runner/0.7.0/codex-runner-0.7.0-macos-x64.tar.gz"
-    sha256 "b9ebba9b0a1423cad55e2073a6afb2b4eb8c67713857bc2a29481f94c2d1fb4f"
+    url "https://packages.jaehyeong.com/projects/codex-runner/0.8.0/codex-runner-0.8.0-macos-x64.tar.gz"
+    sha256 "f10bdecd296b5b3743e5fa5939ee4c1e31bf5e92655327fc50a94342ec83d09f"
   end
 
   def install
